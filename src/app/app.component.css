@@ -1,0 +1,29 @@
+.vh-100 {
+    min-height: 100vh;
+}
+
+.header {
+    position: absolute;
+}
+
+.bg-main {
+    background-color: #303030;
+}
+
+.bg-square {
+    background-color: #4BC9C9
+}
+
+.text {
+    color: #8EDEA6;
+    font-family: 'consolas';
+}
+
+.repo-input {
+    background-color: #3A3E41;
+    border: 0px
+}
+
+.vh-100 {
+    min-height: 100vh
+}

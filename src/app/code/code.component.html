@@ -1,0 +1,31 @@
+<div *ngFor="let line of manager.getCodeRenderUnits(true)">
+    <div *ngIf="isNewline(line); else newLineElse"><br></div>
+    <ng-template #newLineElse>
+        <span *ngFor="let codeUnit of line.units" [class.code-success]="codeUnit.condition" [class.code-current]="manager.isCurrentUnit(codeUnit)">
+            <span *ngIf="codeUnit.isSpace(); else showChar">&nbsp;</span>
+            <ng-template #showChar>
+                <span *ngIf="codeUnit.isNotNewline()">{{codeUnit.char}}</span>
+            </ng-template>
+        </span>
+    </ng-template>
+</div>
+<br>
+<div *ngFor="let line of manager.getCodeRenderUnits(false)">
+    <div *ngIf="isNewline(line); else newLineElse"><br></div>
+    <ng-template #newLineElse>
+        <span *ngFor="let codeUnit of line.units" [class.code-success]="codeUnit.condition">
+            <span *ngIf="codeUnit.isSpace(); else showChar">&nbsp;</span>
+            <ng-template #showChar>
+                <span *ngIf="codeUnit.isNotNewline()">{{codeUnit.char}}</span>
+            </ng-template>
+        </span>
+    </ng-template>
+</div>
+
+<span *ngFor="let codeUnit of manager.failure" class="code-failure">
+    <span *ngIf="codeUnit.isSpace(); else showChar" class="code-failure">_</span>
+    <ng-template #showChar>
+        <span *ngIf="codeUnit.isNotNewline()">{{codeUnit.char}}</span>
+    </ng-template>
+</span>
+<span class="code-current">&nbsp;</span>

@@ -1,0 +1,16 @@
+pre {
+    display: inline;
+}
+
+.code-success {
+    color: #4E878C;
+}
+
+.code-failure {
+    color: #F93943;
+}
+
+.code-current {
+    text-decoration: underline;
+    text-decoration-color: #4E878C;
+}
