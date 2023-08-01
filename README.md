@@ -1,4 +1,19 @@
 # TypingPal
+A simple project to improve my coding typing skills in multiple languages.
+
+# Work Log
+Working in a moderate fashion
+
+# Nice To Have
+* Repo input
+* Ability to specify visible lines
+* Better coloring
+* Current write character underscore inline with written text
+* An actual library layout
+* Better HTML layout
+* And more
+
+# Angular Stuff
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
 
